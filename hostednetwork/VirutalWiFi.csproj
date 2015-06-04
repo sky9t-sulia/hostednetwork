@@ -7,8 +7,8 @@
     <ProjectGuid>{D3E17398-BA76-49C6-9233-0757737F69BE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>hostednetwork</RootNamespace>
-    <AssemblyName>hostednetwork</AssemblyName>
+    <RootNamespace>VirtualWiFi</RootNamespace>
+    <AssemblyName>VirtialWiFi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,7 +65,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <StartupObject>hostednetwork.Program</StartupObject>
+    <StartupObject>VirtualWiFi.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -73,6 +73,7 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -131,7 +132,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>russian.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Properties\app.manifest" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,32 +171,62 @@
   <ItemGroup>
     <PublishFile Include="en\hostednetwork.resources">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="en\VirtialWiFi.resources">
+      <Visible>False</Visible>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="hostednetwork.exe.config">
       <Visible>False</Visible>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Auto</PublishState>
-      <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="hostednetwork.exe.manifest">
       <Visible>False</Visible>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <FileType>ManifestEntryPoint</FileType>
+    </PublishFile>
+    <PublishFile Include="VirtialWiFi.exe.config">
+      <Visible>False</Visible>
       <PublishState>Auto</PublishState>
       <IncludeHash>False</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="VirtialWiFi.exe.manifest">
+      <Visible>False</Visible>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <FileType>ManifestEntryPoint</FileType>
     </PublishFile>
   </ItemGroup>

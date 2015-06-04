@@ -1,4 +1,4 @@
-﻿namespace hostednetwork
+﻿namespace VirtualWiFi
 {
     partial class VirtualWiFi
     {
@@ -59,7 +59,7 @@
             this.startStopBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.startStopBtn.Name = "startStopBtn";
             this.startStopBtn.UseVisualStyleBackColor = true;
-            this.startStopBtn.Click += new System.EventHandler(this.startStopAction);
+            this.startStopBtn.Click += new System.EventHandler(this.StartStopAction);
             // 
             // launched
             // 
@@ -86,13 +86,13 @@
             // 
             resources.ApplyResources(this.ssid, "ssid");
             this.ssid.Name = "ssid";
-            this.ssid.TextChanged += new System.EventHandler(this.ssid_entering);
+            this.ssid.TextChanged += new System.EventHandler(this.SsidEntering);
             // 
             // passTextBox
             // 
             resources.ApplyResources(this.passTextBox, "passTextBox");
             this.passTextBox.Name = "passTextBox";
-            this.passTextBox.TextChanged += new System.EventHandler(this.pass_entering);
+            this.passTextBox.TextChanged += new System.EventHandler(this.PassEentering);
             // 
             // menuStrip1
             // 
@@ -128,7 +128,7 @@
             this.englishTool.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.englishTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.englishTool.Name = "englishTool";
-            this.englishTool.Click += new System.EventHandler(this.setEnglishLang);
+            this.englishTool.Click += new System.EventHandler(this.SetEnglishLang);
             // 
             // russianTool
             // 
@@ -136,14 +136,14 @@
             this.russianTool.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.russianTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.russianTool.Name = "russianTool";
-            this.russianTool.Click += new System.EventHandler(this.setRussianLang);
+            this.russianTool.Click += new System.EventHandler(this.SetRussianLang);
             // 
             // minToTrayTool
             // 
             resources.ApplyResources(this.minToTrayTool, "minToTrayTool");
             this.minToTrayTool.BackColor = System.Drawing.Color.White;
             this.minToTrayTool.Name = "minToTrayTool";
-            this.minToTrayTool.Click += new System.EventHandler(this.minimizeToTray);
+            this.minToTrayTool.Click += new System.EventHandler(this.MinimizeToTray);
             // 
             // startupTool
             // 
@@ -151,14 +151,14 @@
             this.startupTool.BackColor = System.Drawing.Color.White;
             this.startupTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.startupTool.Name = "startupTool";
-            this.startupTool.Click += new System.EventHandler(this.setStartup);
+            this.startupTool.Click += new System.EventHandler(this.SetStartup);
             // 
             // aboutTool
             // 
             resources.ApplyResources(this.aboutTool, "aboutTool");
             this.aboutTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.aboutTool.Name = "aboutTool";
-            this.aboutTool.Click += new System.EventHandler(this.aboutMessage);
+            this.aboutTool.Click += new System.EventHandler(this.AboutMessage);
             // 
             // openConsoleBtn
             // 
@@ -167,7 +167,7 @@
             this.openConsoleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.openConsoleBtn.Name = "openConsoleBtn";
             this.openConsoleBtn.UseVisualStyleBackColor = true;
-            this.openConsoleBtn.Click += new System.EventHandler(this.consoleButton_Click);
+            this.openConsoleBtn.Click += new System.EventHandler(this.ConsoleButtonClick);
             // 
             // console
             // 
@@ -178,13 +178,13 @@
             // expandTimer
             // 
             this.expandTimer.Interval = 2;
-            this.expandTimer.Tick += new System.EventHandler(this.expand_Console);
+            this.expandTimer.Tick += new System.EventHandler(this.ExpandConsole);
             // 
             // tray
             // 
             this.tray.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             resources.ApplyResources(this.tray, "tray");
-            this.tray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.trayDoubleClick);
+            this.tray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TrayDoubleClick);
             // 
             // VirtualWiFi
             // 
@@ -208,8 +208,8 @@
             this.Name = "VirtualWiFi";
             this.Opacity = 0.99D;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.saveSettings);
-            this.Load += new System.EventHandler(this.formLoading);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SaveSettings);
+            this.Load += new System.EventHandler(this.FormLoading);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

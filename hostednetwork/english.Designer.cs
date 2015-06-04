@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hostednetwork {
+namespace VirtualWiFi {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace hostednetwork {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("hostednetwork.english", typeof(english).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VirtualWiFi.english", typeof(english).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace hostednetwork
+namespace VirtualWiFi
 {
     public partial class VirtualWiFi : Form
     {
@@ -24,7 +24,7 @@ namespace hostednetwork
             ssid.Text = Properties.Settings.Default.ssid;
             passTextBox.Text = Properties.Settings.Default.password;
             var lang = Properties.Settings.Default.currentLang;
-            setLanguage(lang);
+            SetLanguage(lang);
         }
 
         private void Launch(string ssid, string pass) {
@@ -38,8 +38,8 @@ namespace hostednetwork
             console.Items.Add("********************************************************************");
             console.Items.Add("");
             Properties.Settings.Default.isLaunched = true;
-            startStopBtn.Text = getTextFromRes("launchStop", Properties.Settings.Default.currentLang);
-            launched.Text = getTextFromRes("launched", Properties.Settings.Default.currentLang);
+            startStopBtn.Text = GetTextFromRes("launchStop", Properties.Settings.Default.currentLang);
+            launched.Text = GetTextFromRes("launched", Properties.Settings.Default.currentLang);
             stopped.Text = "";
         }
 
@@ -49,8 +49,8 @@ namespace hostednetwork
             console.Items.Add("********************************************************************");
             console.Items.Add("");
             Properties.Settings.Default.isLaunched = false;
-            startStopBtn.Text = getTextFromRes("launchStart", Properties.Settings.Default.currentLang);
-            stopped.Text = getTextFromRes("stopped", Properties.Settings.Default.currentLang);
+            startStopBtn.Text = GetTextFromRes("launchStart", Properties.Settings.Default.currentLang);
+            stopped.Text = GetTextFromRes("stopped", Properties.Settings.Default.currentLang);
             launched.Text = "";
         }
 
@@ -79,31 +79,31 @@ namespace hostednetwork
             process.Close();
         }
 
-        private void setLanguage(string lang) {
+        private void SetLanguage(string lang) {
             if(lang == "") { lang = "english"; }
 
             if (Properties.Settings.Default.isLaunched) {
                 stopped.Text = "";
-                launched.Text = getTextFromRes("launched", lang);
-                startStopBtn.Text = getTextFromRes("launchStop", lang);
+                launched.Text = GetTextFromRes("launched", lang);
+                startStopBtn.Text = GetTextFromRes("launchStop", lang);
             } else {
                 launched.Text = "";
-                stopped.Text = getTextFromRes("stopped", lang);
-                startStopBtn.Text = getTextFromRes("launchStart", lang);
+                stopped.Text = GetTextFromRes("stopped", lang);
+                startStopBtn.Text = GetTextFromRes("launchStart", lang);
             }
-            startupTool.Text = getTextFromRes("startuptool", lang);
-            minToTrayTool.Text = getTextFromRes("hidetotraytool", lang);
-            ssidLabel.Text = getTextFromRes("ssidlabel", lang);
-            pwdLabel.Text = getTextFromRes("pwdlabel", lang);
-            settingsTool.Text = getTextFromRes("settingstool", lang);
-            languageTool.Text = getTextFromRes("languagetool", lang);
-            aboutTool.Text = getTextFromRes("abouttool", lang);
-            openConsoleBtn.Text = getTextFromRes("console", lang);
+            startupTool.Text = GetTextFromRes("startuptool", lang);
+            minToTrayTool.Text = GetTextFromRes("hidetotraytool", lang);
+            ssidLabel.Text = GetTextFromRes("ssidlabel", lang);
+            pwdLabel.Text = GetTextFromRes("pwdlabel", lang);
+            settingsTool.Text = GetTextFromRes("settingstool", lang);
+            languageTool.Text = GetTextFromRes("languagetool", lang);
+            aboutTool.Text = GetTextFromRes("abouttool", lang);
+            openConsoleBtn.Text = GetTextFromRes("console", lang);
         }
 
-        private string getTextFromRes(string key, string lang) {
+        private string GetTextFromRes(string key, string lang) {
             if(lang == "") { lang = "english"; }
-            ResourceManager rm = new ResourceManager("hostednetwork." + lang, GetType().Assembly);
+            ResourceManager rm = new ResourceManager("VirtualWiFi." + lang, GetType().Assembly);
             var entry =
                 rm.GetResourceSet(System.Threading.Thread.CurrentThread.CurrentCulture, true, true)
                   .OfType<DictionaryEntry>()
@@ -112,22 +112,22 @@ namespace hostednetwork
             return value;
         }
 
-        private void setRussianLang(object sender, EventArgs e) {
+        private void SetRussianLang(object sender, EventArgs e) {
             Properties.Settings.Default.currentLang = "russian";
-            setLanguage("russian");
+            SetLanguage("russian");
         }
 
-        private void setEnglishLang(object sender, EventArgs e) {
+        private void SetEnglishLang(object sender, EventArgs e) {
             Properties.Settings.Default.currentLang = "english";
-            setLanguage("english");
+            SetLanguage("english");
         }
 
-        private void saveSettings(object sender, FormClosingEventArgs e) {
+        private void SaveSettings(object sender, FormClosingEventArgs e) {
             Properties.Settings.Default.isExpanded = false;
             Properties.Settings.Default.Save(); // Сохранить настройки
         }
 
-        private void startStopAction(object sender, EventArgs e) {
+        public void StartStopAction(object sender, EventArgs e) {
             if(ssid.Text.Length < 3) { ssid.BackColor = Color.Red; return; }
             if(passTextBox.Text.Length < 8) { passTextBox.BackColor = Color.Red; return; }
             var isLaunched = Properties.Settings.Default.isLaunched;
@@ -140,27 +140,27 @@ namespace hostednetwork
             }
         }
 
-        private void ssid_entering(object sender, EventArgs e) {
+        private void SsidEntering(object sender, EventArgs e) {
             if(this.Text.Length > 3) { ssid.BackColor = SystemColors.Window; }
             Properties.Settings.Default.ssid = ssid.Text;
         }
 
-        private void pass_entering(object sender, EventArgs e) {
+        private void PassEentering(object sender, EventArgs e) {
             if(passTextBox.Text.Length >= 8 && passTextBox.BackColor != SystemColors.Window) {
                 passTextBox.BackColor = SystemColors.Window;
             }
             Properties.Settings.Default.password = passTextBox.Text;
         }
 
-        private void formLoading(object sender, EventArgs e) {
+        private void FormLoading(object sender, EventArgs e) {
             Init();
         }
 
-        private void consoleButton_Click(object sender, EventArgs e) {
+        private void ConsoleButtonClick(object sender, EventArgs e) {
             expandTimer.Start();
         }
 
-        private void expand_Console(object sender, EventArgs e) {
+        private void ExpandConsole(object sender, EventArgs e) {
             if (Properties.Settings.Default.isExpanded == false) {
                 if (this.Width <= 1200) {
                     this.Width += 40;
@@ -178,11 +178,11 @@ namespace hostednetwork
             }
         }
 
-        private void aboutMessage(object sender, EventArgs e) {
-            var msg = MessageBox.Show(getTextFromRes("about",Properties.Settings.Default.currentLang),"VirtualWiFi",MessageBoxButtons.OK);
+        private void AboutMessage(object sender, EventArgs e) {
+            var msg = MessageBox.Show(GetTextFromRes("about",Properties.Settings.Default.currentLang),"VirtualWiFi",MessageBoxButtons.OK);
         }
 
-        private void setStartup(object sender, EventArgs e) {
+        private void SetStartup(object sender, EventArgs e) {
             // The path to the key where Windows looks for startup applications
             RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             if (Properties.Settings.Default.isStartup == true) {
@@ -199,7 +199,7 @@ namespace hostednetwork
             }
         }
         bool firstTime = true;
-        private void minimizeToTray(object sender, EventArgs e) {
+        private void MinimizeToTray(object sender, EventArgs e) {
             this.ShowInTaskbar = false;
             tray.Visible = true;
             if (firstTime) {
@@ -209,7 +209,7 @@ namespace hostednetwork
             this.Hide();
         }
 
-        private void trayDoubleClick(object sender, MouseEventArgs e) {
+        private void TrayDoubleClick(object sender, MouseEventArgs e) {
             this.ShowInTaskbar = true;
             tray.Visible = false;
             this.Show();

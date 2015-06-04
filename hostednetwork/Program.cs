@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace hostednetwork
+namespace VirtualWiFi
 {
     static class Program
     {
