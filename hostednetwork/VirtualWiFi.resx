@@ -2943,6 +2943,9 @@
   <data name="ssid.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;passTextBox.Name" xml:space="preserve">
+    <value>passTextBox</value>
+  </data>
   <data name="&gt;&gt;startStopBtn.Name" xml:space="preserve">
     <value>startStopBtn</value>
   </data>
@@ -2958,17 +2961,14 @@
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="startStopBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 14.25pt</value>
-  </data>
   <data name="&gt;&gt;languageTool.Name" xml:space="preserve">
     <value>languageTool</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>283, 211</value>
-  </data>
   <data name="&gt;&gt;launched.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="passTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 27</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -3003,9 +3003,6 @@
   <data name="pwdLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>VirtualWiFi</value>
-  </data>
   <data name="&gt;&gt;openConsoleBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -3024,8 +3021,8 @@
   <data name="&gt;&gt;minToTrayTool.Name" xml:space="preserve">
     <value>minToTrayTool</value>
   </data>
-  <data name="ssidLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+  <data name="&gt;&gt;pwdLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="ssidLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -3033,11 +3030,17 @@
   <data name="console.Size" type="System.Drawing.Size, System.Drawing">
     <value>887, 160</value>
   </data>
+  <data name="englishTool.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
   <data name="&gt;&gt;ssid.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="&gt;&gt;openConsoleBtn.Name" xml:space="preserve">
     <value>openConsoleBtn</value>
+  </data>
+  <data name="&gt;&gt;ssidLabel.Name" xml:space="preserve">
+    <value>ssidLabel</value>
   </data>
   <data name="&gt;&gt;russianTool.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3054,14 +3057,14 @@
   <data name="openConsoleBtn.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;stopped.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="passTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="minToTrayTool.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="&gt;&gt;launched.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;passTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pwdLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -3084,14 +3087,8 @@
   <data name="&gt;&gt;aboutTool.Name" xml:space="preserve">
     <value>aboutTool</value>
   </data>
-  <data name="startupTool.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
   <data name="launched.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;expandTimer.Name" xml:space="preserve">
-    <value>expandTimer</value>
   </data>
   <data name="pwdLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
@@ -3102,6 +3099,9 @@
   <data name="launched.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -3111,8 +3111,8 @@
   <data name="stopped.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 19</value>
   </data>
-  <data name="&gt;&gt;pwdLabel.Name" xml:space="preserve">
-    <value>pwdLabel</value>
+  <data name="&gt;&gt;stopped.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="tray.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3122,6 +3122,9 @@
   </data>
   <data name="&gt;&gt;openConsoleBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pwdLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;expandTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3138,6 +3141,9 @@
   <data name="&gt;&gt;minToTrayTool.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ssid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="ssidLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3153,9 +3159,6 @@
   <data name="openConsoleBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 162</value>
   </data>
-  <data name="stopped.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
   <data name="settingsTool.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 20</value>
   </data>
@@ -3168,17 +3171,17 @@
   <data name="console.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="launched.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="stopped.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 10.25pt</value>
   </data>
   <data name="&gt;&gt;launched.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="englishTool.Text" xml:space="preserve">
-    <value>English</value>
+  <data name="&gt;&gt;englishTool.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;expandTimer.Name" xml:space="preserve">
+    <value>expandTimer</value>
   </data>
   <data name="stopped.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3189,14 +3192,14 @@
   <data name="&gt;&gt;openConsoleBtn.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ssidLabel.Name" xml:space="preserve">
-    <value>ssidLabel</value>
+  <data name="ssidLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>8, 2, 0, 2</value>
   </data>
-  <data name="&gt;&gt;passTextBox.Name" xml:space="preserve">
-    <value>passTextBox</value>
+  <data name="stopped.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="&gt;&gt;launched.Name" xml:space="preserve">
     <value>launched</value>
@@ -3225,8 +3228,8 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Virtual WiFi</value>
   </data>
-  <data name="passTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 27</value>
+  <data name="&gt;&gt;stopped.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;ssid.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3240,8 +3243,8 @@
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
-  <data name="&gt;&gt;tray.Name" xml:space="preserve">
-    <value>tray</value>
+  <data name="launched.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>283, 24</value>
@@ -6075,11 +6078,8 @@
   <data name="pwdLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;pwdLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;settingsTool.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pwdLabel.Name" xml:space="preserve">
+    <value>pwdLabel</value>
   </data>
   <data name="russianTool.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 22</value>
@@ -6087,17 +6087,17 @@
   <data name="openConsoleBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="passTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="startupTool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
   </data>
-  <data name="&gt;&gt;pwdLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="startStopBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
   </data>
-  <data name="&gt;&gt;passTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>283, 211</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>VirtualWiFi</value>
   </data>
   <data name="aboutTool.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 20</value>
@@ -6105,17 +6105,17 @@
   <data name="&gt;&gt;ssidLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="ssid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="&gt;&gt;settingsTool.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;stopped.Parent" xml:space="preserve">
+  <data name="&gt;&gt;launched.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;console.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;englishTool.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tray.Name" xml:space="preserve">
+    <value>tray</value>
   </data>
   <data name="stopped.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -6132,19 +6132,13 @@
   <metadata name="expandTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="console.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="tray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>254, 17</value>
   </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>139, 17</value>
   </metadata>
-  <metadata name="console.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="tray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>254, 17</value>
   </metadata>
 </root>
